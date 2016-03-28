@@ -121,3 +121,4 @@ Switch drivers one last time:
 2. On the user's profile page, display the number of posts the user has written. **Hint:** You'll need to add `.populate('posts')` to your `GET /api/me` route in `server.js`.
 
 3. On the user profile page, the "Joined" date isn't formatted very nicely. Use Angular's built-in <a href="https://docs.angularjs.org/api/ng/filter/date" target="_blank">date filter</a> to display the date in this format: `January 25, 2016`.
+# angular_auth

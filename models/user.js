@@ -1,15 +1,19 @@
 var mongoose = require('mongoose'),
     Schema = mongoose.Schema,
-    bcrypt = require('bcryptjs');
+    bcrypt = require('bcryptjs'),
+    PostSchema = require('./post').schema;
 
 var userSchema = new Schema({
   created: { type: Date },
   updated: { type: Date },
+  uername: String,
   email: { type: String, unique: true, lowercase: true },
   password: { type: String, select: false },
   displayName: String,
   // TODO #12
-  picture: String
+  picture: String,
+  posts: [PostSchema]
+
 });
 
 userSchema.pre('save', function (next) {
